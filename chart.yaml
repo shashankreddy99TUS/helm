@@ -1,5 +1,12 @@
-apiVersion:
+# apiVersion:
+# name: nginx
+# version: 1.0.0 # chart vesrion 
+# description: This is nginx deployment
+# appVersion: 1.2.0 # nginx app version
+
+apiVersion: v2
 name: nginx
-version: 1.0.0 # chart vesrion 
 description: This is nginx deployment
-appVersion: 1.2.0 # nginx app version
+type: application
+version: 1.0.0       # chart version
+appVersion: "1.2.0"  # nginx app version
