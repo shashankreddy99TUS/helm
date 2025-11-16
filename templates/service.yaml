@@ -1,15 +1,33 @@
-kind: Service
+# kind: Service
+# apiVersion: v1
+# metadata:
+#   name: nginx
+# spec:
+#   type: LoadBalancer
+#   selector: # labels are used as selectors
+#    app: nginx
+#    tier: frontend
+#    purpose: deployment
+#   ports:
+#     - protocol: TCP
+#       port: 80 # service port
+#       targetPort: 80
+#       nodePort: {{ .Values.service.nodePort }} 
+
+
+
 apiVersion: v1
+kind: Service
 metadata:
   name: nginx
 spec:
   type: LoadBalancer
   selector: # labels are used as selectors
-   app: nginx
-   tier: frontend
-   purpose: deployment
+    app: nginx
+    tier: frontend
+    purpose: deployment
   ports:
     - protocol: TCP
-      port: 80 # service port
+      port: 80
       targetPort: 80
-      nodePort: {{ .Values.service.nodePort }} 
+      nodePort: {{ .Values.service.nodePort }}
