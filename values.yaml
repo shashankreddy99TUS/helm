@@ -1,6 +1,6 @@
 deployment:
   replicas: 3
-  imageversion: stable-perl
+  imageversion: stable-bookworn-perl
 
 service:
   nodePort: 30007
